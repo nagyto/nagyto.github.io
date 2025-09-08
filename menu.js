@@ -1,26 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Get elements by ID (update per page)
-  const toggle = document.getElementById("menu-toggle-about"); // change per page
-  const menu = document.getElementById("menu-about");
-  const overlay = document.getElementById("menu-overlay-about");
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu");
+  const overlay = document.querySelector(".menu-overlay");
 
-  if (!toggle || !menu || !overlay) return; // safety check
-
-  // Toggle menu open/close
   toggle.addEventListener("click", () => {
-    toggle.classList.toggle("active");   // hamburger → X
-    menu.classList.toggle("active");     // slide menu
-    overlay.classList.toggle("active");  // overlay
+    toggle.classList.toggle("active");
+    menu.classList.toggle("active");
+    overlay.classList.toggle("active");
   });
 
-  // Click overlay to close
   overlay.addEventListener("click", () => {
     toggle.classList.remove("active");
     menu.classList.remove("active");
     overlay.classList.remove("active");
   });
 
-  // Close menu when clicking any link
   menu.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       toggle.classList.remove("active");
