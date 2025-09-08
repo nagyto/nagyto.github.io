@@ -18,7 +18,41 @@ body.home {
 
 /* Navbar */
 .navbar { position:absolute; top:10px; left:10px; z-index:1000; }
-.menu-toggle { font-size:2rem; cursor:pointer; user-select:none; color:white; background:rgba(0,0,0,0.5); padding:5px 10px; border-radius:5px; }
+/* Hamburger Button */
+.menu-toggle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.5);
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* When menu is active, transform into X */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
 
 /* Slide-out Menu */
 .menu { list-style:none; background:rgba(0,0,0,0.9); position:fixed; top:0; left:-250px; width:200px; height:100%; padding-top:60px; transition:left 0.3s ease; z-index:999; }
