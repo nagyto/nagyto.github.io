@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("menu-overlay");
 
   toggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    overlay.classList.toggle("active");
-    toggle.classList.toggle("active"); // <- toggles X animation
+    toggle.classList.toggle("active");  // hamburger → X
+    menu.classList.toggle("active");    // slide menu
+    overlay.classList.toggle("active"); // show overlay
   });
 
   overlay.addEventListener("click", () => {
+    toggle.classList.remove("active");
     menu.classList.remove("active");
     overlay.classList.remove("active");
-    toggle.classList.remove("active"); // <- remove X when closed
   });
 });
