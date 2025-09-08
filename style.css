@@ -47,6 +47,16 @@ body.home .hero p { font-size:1.2rem; }
 .menu-toggle.active span:nth-child(2){ opacity:0;}
 .menu-toggle.active span:nth-child(3){ transform: rotate(-45deg) translate(7px,-7px);}
 
+.subpage {
+  padding: 70px 20px 20px 20px; /* space for navbar */
+}
+.navbar {
+  position: fixed;   /* keep it visible while scrolling */
+  top: 0;
+  left: 0;
+  z-index: 1002;
+}
+
 /* -------------------- Slide-out Menu -------------------- */
 .menu {
   list-style:none;
