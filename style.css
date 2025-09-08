@@ -1,16 +1,6 @@
 /* -------------------- Reset -------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: white;
-  overflow-x: hidden; /* prevent horizontal scroll */
-}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; line-height:1.6; color:white; overflow-x:hidden; }
 
 /* -------------------- Hero Section -------------------- */
 body.home {
@@ -19,184 +9,106 @@ body.home {
   display: flex;
   flex-direction: column;
 }
-
 body.home .hero {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 15px;
+  flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 15px;
 }
-
-body.home .hero h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-body.home .hero p {
-  font-size: 1.2rem;
-}
+body.home .hero h1 { font-size:2rem; margin-bottom:10px; }
+body.home .hero p { font-size:1.2rem; }
 
 /* -------------------- Navbar & Hamburger -------------------- */
 .navbar {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 1001;
+  top:10px;
+  left:10px;
+  z-index:1002;
 }
-
-/* Hamburger Button (square) */
 .menu-toggle {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 8px;
+  position: relative;
+  width:50px;
+  height:50px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  padding:10px;
+  cursor:pointer;
+  border-radius:8px;
   background: rgba(0,0,0,0.6);
-  z-index: 1001;
+  z-index:1002;  /* above overlay */
 }
-
 .menu-toggle span {
-  display: block;
-  height: 4px;
-  width: 100%;
-  background: white;
-  border-radius: 2px;
+  display:block;
+  height:4px;
+  width:100%;
+  background:white;
+  border-radius:2px;
   transition: all 0.3s ease;
 }
-
-/* Hamburger → X animation */
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(7px, 7px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
-}
+.menu-toggle.active span:nth-child(1){ transform: rotate(45deg) translate(7px,7px);}
+.menu-toggle.active span:nth-child(2){ opacity:0;}
+.menu-toggle.active span:nth-child(3){ transform: rotate(-45deg) translate(7px,-7px);}
 
 /* -------------------- Slide-out Menu -------------------- */
 .menu {
-  list-style: none;
+  list-style:none;
   background: rgba(0,0,0,0.9);
   position: fixed;
-  top: 0;
-  left: -250px; /* hidden by default */
-  width: 220px;
-  height: 100%;
-  padding-top: 60px;
-  transition: left 0.3s ease;
-  z-index: 999;
+  top:0;
+  left:-250px;
+  width:220px;
+  height:100%;
+  padding-top:60px;
+  transition:left 0.3s ease;
+  z-index:1000; /* under toggle */
 }
-
-.menu.active {
-  left: 0; /* slide in */
-}
-
-.menu li {
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-
-.menu li:last-child {
-  border-bottom: none;
-}
-
-.menu a {
-  display: block;
-  padding: 15px 20px;
-  text-decoration: none;
-  color: white;
-}
-
-.menu a:hover {
-  background: rgba(255,255,255,0.1);
-}
+.menu.active { left:0; }
+.menu li { border-bottom:1px solid rgba(255,255,255,0.2); }
+.menu li:last-child { border-bottom:none; }
+.menu a { display:block; padding:15px 20px; text-decoration:none; color:white; }
+.menu a:hover { background: rgba(255,255,255,0.1); }
 
 /* -------------------- Overlay -------------------- */
 .menu-overlay {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top:0; left:0;
+  width:100%; height:100%;
   background: rgba(0,0,0,0.5);
-  opacity: 0;
-  visibility: hidden;
+  opacity:0;
+  visibility:hidden;
   transition: opacity 0.3s ease;
-  z-index: 900;
+  z-index:1001; /* under toggle */
 }
-
-.menu-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
+.menu-overlay.active { opacity:1; visibility:visible; }
 
 /* -------------------- Subpage Styling -------------------- */
-.subpage {
-  padding: 20px;
-  background: #f4f4f4;
-  color: #333;
-}
-
-.subpage nav {
-  margin-bottom: 20px;
-}
-
-.subpage a {
-  margin-right: 10px;
-  color: #0077cc;
-  text-decoration: none;
-}
-
-.subpage a:hover {
-  text-decoration: underline;
-}
+.subpage { padding:20px; background:#f4f4f4; color:#333; }
+.subpage nav { margin-bottom:20px; }
+.subpage a { margin-right:10px; color:#0077cc; text-decoration:none; }
+.subpage a:hover { text-decoration:underline; }
 
 /* -------------------- Responsive -------------------- */
-/* Tablets */
-@media (min-width: 600px) and (max-width: 1024px) {
-  .menu {
-    width: 250px;
-  }
-  .menu a {
-    padding: 18px 25px;
-    font-size: 1.1rem;
-  }
-  .menu-toggle {
-    width: 55px;
-    height: 55px;
-    padding: 10px;
-  }
-  body.home .hero h1 { font-size: 2.5rem; }
-  body.home .hero p { font-size: 1.4rem; }
+@media (min-width:600px) and (max-width:1024px) {
+  .menu { width:250px; }
+  .menu a { padding:18px 25px; font-size:1.1rem; }
+  .menu-toggle { width:55px; height:55px; padding:10px; }
+  body.home .hero h1 { font-size:2.5rem; }
+  body.home .hero p { font-size:1.4rem; }
 }
 
-/* Desktops */
-@media (min-width: 1025px) {
+@media (min-width:1025px) {
   .menu {
     position: static;
-    width: auto;
-    height: auto;
-    display: flex !important;
-    background: transparent;
-    padding-top: 0;
-    left: 0;
-    transition: none;
+    width:auto;
+    height:auto;
+    display:flex !important;
+    background:transparent;
+    padding-top:0;
+    left:0;
+    transition:none;
   }
-  .menu li { border: none; }
-  .menu a {
-    padding: 10px 15px;
-    color: white;
-  }
-  .menu-toggle { display: none; }
-  .menu-overlay { display: none; }
-
-  body.home .hero h1 { font-size: 3rem; }
-  body.home .hero p { font-size: 1.6rem; }
+  .menu li { border:none; }
+  .menu a { padding:10px 15px; color:white; }
+  .menu-toggle { display:none; }
+  .menu-overlay { display:none; }
+  body.home .hero h1 { font-size:3rem; }
+  body.home .hero p { font-size:1.6rem; }
 }
