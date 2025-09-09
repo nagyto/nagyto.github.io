@@ -251,68 +251,47 @@ body.subpage {
   margin-bottom: 0.8em;
 }
 
-.programme .day ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.programme .day ul li {
+/* Full-width events */
+.programme .day .event {
   display: flex;
-  align-items: flex-start;   /* align time and activity top */
+  align-items: center;
   padding: 10px 15px;
-  margin-bottom: 8px;
-  border-radius: 6px;
+  margin-bottom: 10px;
+  border-radius: 12px;
   color: white;
   font-size: 1rem;
-  flex-wrap: wrap;           /* wrap on small screens */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Time column */
-.programme .day ul li .time {
-  width: 90px;              /* fixed width for alignment */
+.programme .day .event .time {
+  width: 90px;       /* fixed width for alignment */
   flex-shrink: 0;
   font-weight: 600;
 }
 
 /* Activity description */
-.programme .day ul li .activity {
+.programme .day .event .activity {
   flex: 1;
 }
 
-/* Event type colors based on keyword in activity */
-.programme .day ul li .activity b {
-  /* color will be applied according to type */
-}
-.programme .day ul li .activity b:contains("Talk") { color: #4caf50; }
-.programme .day ul li .activity b:contains("Meal") { color: #ff9800; }
-.programme .day ul li .activity b:contains("Coffee") { color: #795548; }
-.programme .day ul li .activity b:contains("Sport") { color: #2196f3; }
+/* Event type colors */
+.programme .day .event.talk { background-color: #4caf50; }     /* green */
+.programme .day .event.meal { background-color: #ff9800; }     /* orange */
+.programme .day .event.coffee { background-color: #795548; }   /* brown */
+.programme .day .event.sport { background-color: #2196f3; }    /* blue */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .programme .day h2 {
-    font-size: 1.5rem;
-  }
-  .programme .day ul li {
-    font-size: 0.95rem;
-    padding: 8px 12px;
-  }
-  .programme .day ul li .time {
-    width: 70px;
-  }
+  .programme .day h2 { font-size: 1.5rem; }
+  .programme .day .event { font-size: 0.95rem; padding: 8px 12px; }
+  .programme .day .event .time { width: 70px; }
 }
 
 @media (max-width: 480px) {
-  .programme .day h2 {
-    font-size: 1.3rem;
-  }
-  .programme .day ul li {
-    font-size: 0.9rem;
-    padding: 6px 10px;
-  }
-  .programme .day ul li .time {
-    width: 60px;
-  }
+  .programme .day h2 { font-size: 1.3rem; }
+  .programme .day .event { font-size: 0.9rem; padding: 6px 10px; }
+  .programme .day .event .time { width: 60px; }
 }
 
