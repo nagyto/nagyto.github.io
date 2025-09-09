@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="stylesheet" href="style.css">
+  <script src="menu.js" defer></script>
 </head>
 <body class="home">
 
-<nav class="navbar">
-  <div class="menu-toggle" id="menu-toggle">
+<nav class="navbar home">
+  <div class="menu-toggle">
     <span></span><span></span><span></span>
   </div>
-  <ul class="menu" id="menu">
+  <ul class="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
@@ -23,26 +24,8 @@
 
 <div class="hero">
   <h1>Welcome to Our Website</h1>
-  <p>Responsive mobile-first design with a perfect hamburger/X toggle.</p>
+  <p>Responsive mobile-first design with perfect hamburger/X toggle.</p>
 </div>
-
-<script>
-const toggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
-const overlay = document.getElementById('menu-overlay');
-
-toggle.addEventListener('click', () => {
-  toggle.classList.toggle('active');
-  menu.classList.toggle('active');
-  overlay.classList.toggle('active');
-});
-
-overlay.addEventListener('click', () => {
-  toggle.classList.remove('active');
-  menu.classList.remove('active');
-  overlay.classList.remove('active');
-});
-</script>
 
 </body>
 </html>
