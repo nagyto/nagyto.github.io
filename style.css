@@ -302,9 +302,8 @@ body.subpage {
   padding: 0;
 }
 
-/* Filter buttons */
 .filter-buttons {
-  margin-bottom: 1em;
+  margin-bottom: 15px;
 }
 
 .filter-buttons button {
@@ -313,12 +312,27 @@ body.subpage {
   border-radius: 6px;
   border: none;
   cursor: pointer;
+  font-weight: bold;
+}
+
+/* Default "Show All" button */
+.filter-buttons button:first-child {
   background-color: #444;
   color: white;
 }
 
-.filter-buttons button:hover {
-  background-color: #666;
+.filter-buttons button:first-child:hover {
+  background-color: #555;
+}
+
+/* "Talks Only" button styled like .talk */
+.filter-buttons button:last-child {
+  background-color: #BEEBF9;
+  color: black;
+}
+
+.filter-buttons button:last-child:hover {
+  background-color: #a8d8eb;
 }
 
 
