@@ -2,29 +2,7 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 html, body { width: 100%; height: 100%; font-family: Arial, sans-serif; line-height:1.6; color:white; overflow-x:hidden; }
 
-/* -------------------- Hero Section -------------------- */
-body.home {
-  background: url('images/hero.jpg') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding-top: 70px; /* push content below navbar */
-  margin: 0;
-}
-body.home .hero {
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:0 15px;
-  margin:0;
-}
-body.home .hero h1 { font-size:2rem; margin-bottom:10px; }
-body.home .hero p { font-size:1.2rem; }
-
-/* -------------------- Navbar & Hamburger -------------------- */
+/* -------------------- Navbar -------------------- */
 .navbar {
   position: fixed;
   top: 0;
@@ -36,8 +14,6 @@ body.home .hero p { font-size:1.2rem; }
   padding: 0 10px;
   z-index: 1002;
   background-color: #000; /* solid black */
-  border: none;
-  box-shadow: none;
 }
 
 /* Hamburger / X */
@@ -49,7 +25,7 @@ body.home .hero p { font-size:1.2rem; }
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #000; /* match navbar */
+  background-color: #000;
   border-radius: 8px;
   padding: 6px 0;
   position: relative;
@@ -114,18 +90,33 @@ body.home .hero p { font-size:1.2rem; }
 }
 .menu-overlay.active { opacity:1; visibility:visible; }
 
-/* -------------------- Subpage Styling -------------------- */
+/* -------------------- Hero Section -------------------- */
+body.home .hero {
+  height: 100vh;
+  background: url('images/hero.jpg') no-repeat center center/cover;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 15px;
+  margin:0;
+}
+body.home .hero h1 { font-size:2rem; margin-bottom:10px; }
+body.home .hero p { font-size:1.2rem; }
+
+/* -------------------- Subpage -------------------- */
 .subpage {
   padding-top: 70px; /* start below navbar */
   padding-left: 20px;
   padding-right: 20px;
   background: #f4f4f4;
   color: #333;
+  margin:0;
 }
-.subpage nav { margin-bottom:20px; }
-.subpage a { margin-right:10px; color:#0077cc; text-decoration:none; }
+.subpage .content h1 { margin-top: 0; } /* remove extra gap above title */
+.subpage a { color:#0077cc; text-decoration:none; margin-right:10px; }
 .subpage a:hover { text-decoration:underline; }
-.subpage .content { padding-top: 20px; }
 
 /* -------------------- Responsive -------------------- */
 @media (min-width:600px) and (max-width:1024px) {
