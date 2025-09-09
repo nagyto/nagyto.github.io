@@ -286,7 +286,6 @@ body.subpage {
 
 /* Make the organisers list compact */
 .organisers {
-  list-style: none;     /* remove bullets */
   padding-left: 0;      /* remove default padding */
   margin: 0;            /* remove default margin */
 }
