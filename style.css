@@ -32,7 +32,9 @@ body.home .hero p { font-size:1.2rem; }
   align-items: center;
   padding: 0 10px;
   z-index: 1002;
-  background: rgba(0,0,0,0.6);
+  background: #000; /* solid black, no grey line */
+  border: none;
+  box-shadow: none;
 }
 
 /* Hamburger / X */
@@ -45,16 +47,16 @@ body.home .hero p { font-size:1.2rem; }
   flex-shrink: 0;           
   display: flex;
   flex-direction: column;
-  justify-content: space-around; /* evenly space bars */
-  align-items: center;           /* center horizontally */
-  background: rgba(0,0,0,0.6);
+  justify-content: space-around;
+  align-items: center;
+  background: #000; /* match navbar */
   border-radius: 8px;
-  padding: 6px 0;         /* space inside square */
+  padding: 6px 0;
 }
 
 .menu-toggle span {
   display: block;
-  width: 70%;             /* bars smaller than square */
+  width: 70%;             
   height: 4px;
   background: white;
   border-radius: 2px;
@@ -114,7 +116,7 @@ body.home .hero p { font-size:1.2rem; }
 
 /* -------------------- Subpage Styling -------------------- */
 .subpage {
-  padding: 70px 20px 20px 20px; 
+  padding: 70px 20px 20px 20px; /* space for fixed navbar */
   background: #f4f4f4;
   color: #333;
 }
