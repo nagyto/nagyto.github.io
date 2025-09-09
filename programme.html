@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conference Programme</title>
+  <title>Programme</title>
   <link rel="stylesheet" href="style.css">
   <script src="menu.js" defer></script>
 </head>
@@ -26,55 +26,53 @@
 <div class="content programme">
   <h1>Conference Programme</h1>
 
+  <!-- Example: Sunday -->
   <div class="day" id="day-sunday">
     <h2>Sunday</h2>
-    <ul>
-      <li>
-        <span class="time">09:00-10:00</span>
-        <span class="activity"><b>Talk:</b> Opening & Welcome</span>
-      </li>
-      <li>
-        <span class="time">12:00-13:00</span>
-        <span class="activity"><b>Meal:</b> Lunch</span>
-      </li>
-      <li>
-        <span class="time">15:00-15:30</span>
-        <span class="activity"><b>Coffee Break</b></span>
-      </li>
-      <li>
-        <span class="time">18:00-19:00</span>
-        <span class="activity"><b>Sport:</b> Evening Hike</span>
-      </li>
-    </ul>
+    <div class="event talk">
+      <span class="time">09:00-10:00</span>
+      <span class="activity"><b>Talk:</b> Opening & Welcome</span>
+    </div>
+    <div class="event meal">
+      <span class="time">12:00-13:00</span>
+      <span class="activity"><b>Meal:</b> Lunch</span>
+    </div>
+    <div class="event coffee">
+      <span class="time">15:00-15:30</span>
+      <span class="activity"><b>Coffee Break</b></span>
+    </div>
+    <div class="event sport">
+      <span class="time">18:00-19:00</span>
+      <span class="activity"><b>Sport:</b> Evening Hike</span>
+    </div>
   </div>
 
+  <!-- Example: Monday -->
   <div class="day" id="day-monday">
     <h2>Monday</h2>
-    <ul>
-      <li>
-        <span class="time">09:00-10:30</span>
-        <span class="activity"><b>Talk:</b> Morning Keynote</span>
-      </li>
-      <li>
-        <span class="time">10:30-11:00</span>
-        <span class="activity"><b>Coffee Break</b></span>
-      </li>
-      <li>
-        <span class="time">12:00-13:00</span>
-        <span class="activity"><b>Meal:</b> Lunch</span>
-      </li>
-      <li>
-        <span class="time">15:00-16:30</span>
-        <span class="activity"><b>Talk:</b> Panel Discussion</span>
-      </li>
-      <li>
-        <span class="time">18:00-19:00</span>
-        <span class="activity"><b>Sport:</b> Hiking Trip</span>
-      </li>
-    </ul>
+    <div class="event talk">
+      <span class="time">09:00-10:30</span>
+      <span class="activity"><b>Talk:</b> Morning Keynote</span>
+    </div>
+    <div class="event coffee">
+      <span class="time">10:30-11:00</span>
+      <span class="activity"><b>Coffee Break</b></span>
+    </div>
+    <div class="event meal">
+      <span class="time">12:00-13:00</span>
+      <span class="activity"><b>Meal:</b> Lunch</span>
+    </div>
+    <div class="event talk">
+      <span class="time">15:00-16:30</span>
+      <span class="activity"><b>Talk:</b> Panel Discussion</span>
+    </div>
+    <div class="event sport">
+      <span class="time">18:00-19:00</span>
+      <span class="activity"><b>Sport:</b> Hiking Trip</span>
+    </div>
   </div>
 
-  <!-- Repeat similar structure for other days -->
+  <!-- Repeat the above structure for Tuesday-Saturday -->
 </div>
 
 </body>
