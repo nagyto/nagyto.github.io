@@ -235,4 +235,84 @@ body.subpage {
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* -------------------- Programme page -------------------- */
+.programme h1 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.programme .day {
+  margin-bottom: 2em;
+}
+
+.programme .day h2 {
+  font-size: 1.8rem;
+  color: #0077cc;
+  margin-bottom: 0.8em;
+}
+
+.programme .day ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.programme .day ul li {
+  display: flex;
+  align-items: flex-start;   /* align time and activity top */
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  flex-wrap: wrap;           /* wrap on small screens */
+}
+
+/* Time column */
+.programme .day ul li .time {
+  width: 90px;              /* fixed width for alignment */
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+/* Activity description */
+.programme .day ul li .activity {
+  flex: 1;
+}
+
+/* Event type colors based on keyword in activity */
+.programme .day ul li .activity b {
+  /* color will be applied according to type */
+}
+.programme .day ul li .activity b:contains("Talk") { color: #4caf50; }
+.programme .day ul li .activity b:contains("Meal") { color: #ff9800; }
+.programme .day ul li .activity b:contains("Coffee") { color: #795548; }
+.programme .day ul li .activity b:contains("Sport") { color: #2196f3; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .programme .day h2 {
+    font-size: 1.5rem;
+  }
+  .programme .day ul li {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+  .programme .day ul li .time {
+    width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .programme .day h2 {
+    font-size: 1.3rem;
+  }
+  .programme .day ul li {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+  .programme .day ul li .time {
+    width: 60px;
+  }
+}
 
