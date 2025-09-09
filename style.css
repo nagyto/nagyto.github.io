@@ -212,3 +212,27 @@ body.subpage {
   padding-left: 0;        /* remove extra padding inside li */
 }
 
+/* -------------------- Menu list items -------------------- */
+.navbar .menu {
+  list-style: none;
+  padding: 0;      /* remove extra padding from the ul */
+  margin: 0;       /* remove extra margin from the ul */
+}
+
+.navbar .menu li {
+  margin: 0;       /* remove margin above/below each li */
+  padding: 0;      /* optional: remove internal padding if present */
+}
+
+.navbar .menu a {
+  display: block;      /* ensures clickable area covers the full row */
+  padding: 15px 20px;  /* keeps spacing inside each menu link */
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
