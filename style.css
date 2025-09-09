@@ -216,6 +216,7 @@ body.subpage {
   list-style: none;
   padding: 0;      /* remove extra padding from the ul */
   margin: 0;       /* remove extra margin from the ul */
+  padding-top: 60px; /* push the first menu item below the toggle button */
 }
 
 .navbar .menu li {
