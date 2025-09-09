@@ -6,6 +6,19 @@
   <title>Programme</title>
   <link rel="stylesheet" href="style.css">
   <script src="menu.js" defer></script>
+  <script>
+    // Filter function to show all or only talks
+    function filterEvents(type) {
+      const events = document.querySelectorAll('.event');
+      events.forEach(event => {
+        if (type === 'all') {
+          event.style.display = 'flex';
+        } else {
+          event.style.display = event.classList.contains(type) ? 'flex' : 'none';
+        }
+      });
+    }
+  </script>
 </head>
 <body class="subpage">
 
@@ -26,7 +39,11 @@
 <div class="content programme">
   <h1>Conference Programme</h1>
 
-  <p></p>
+  <!-- Filter buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterEvents('all')">Show All</button>
+    <button onclick="filterEvents('talk')">Talks Only</button>
+  </div>
 
   <!-- Sunday -->
   <div class="day" id="day-sunday">
