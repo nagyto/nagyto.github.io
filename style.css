@@ -47,18 +47,18 @@ html, body {
   background: white;
   border-radius: 2px;
   transition: all 0.3s ease;
-  transform-origin: center;     /* crucial for proper X rotation */
+  transform-origin: center;
 }
 
-/* X animation, perfectly centered */
+/* Hamburger → X animation (perfectly centered) */
 .menu-toggle.active span:nth-child(1){
-  transform: rotate(45deg) translate(0, 0);
+  transform: rotate(45deg) translateY(6px);   /* push down toward center */
 }
 .menu-toggle.active span:nth-child(2){
-  opacity: 0;
+  opacity: 0;                                /* hide middle bar */
 }
 .menu-toggle.active span:nth-child(3){
-  transform: rotate(-45deg) translate(0, 0);
+  transform: rotate(-45deg) translateY(-6px); /* push up toward center */
 }
 
 /* -------------------- Slide-out Menu -------------------- */
