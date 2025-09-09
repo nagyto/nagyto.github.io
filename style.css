@@ -295,3 +295,10 @@ body.subpage {
   padding: 0;           /* remove extra spacing */
 }
 
+.organisers li a {
+  display: inline;   /* ensures link does not create extra space */
+  margin: 0;
+  padding: 0;
+}
+
+
