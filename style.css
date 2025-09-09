@@ -237,13 +237,13 @@ body.subpage {
 
 /* -------------------- Programme page -------------------- */
 .programme .day {
-  margin-bottom: 3em;  /* more space between days */
+  margin-bottom: 3em;  /* space between days */
 }
 
 .programme .day .event {
   display: flex;
   align-items: flex-start;       /* align time and activity to top */
-  padding: 25px 20px;            /* taller cards = more vertical padding */
+  padding: 12px 20px;            /* reduce vertical padding → shorter cards (~60% of before) */
   margin-bottom: 10px;           /* spacing between cards */
   border-radius: 12px;
   color: black;
@@ -257,7 +257,7 @@ body.subpage {
   width: 120px;                  /* fixed width for alignment */
   flex-shrink: 0;
   font-weight: 600;
-  margin-right: 20px;            /* more space between time and activity */
+  margin-right: 20px;            /* space between time and activity */
 }
 
 /* Activity description */
@@ -274,12 +274,12 @@ body.subpage {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .programme .day { margin-bottom: 2.5em; }
-  .programme .day .event { font-size: 0.95rem; padding: 20px 15px; }
+  .programme .day .event { font-size: 0.95rem; padding: 10px 15px; }
   .programme .day .event .time { width: 100px; margin-right: 15px; }
 }
 
 @media (max-width: 480px) {
   .programme .day { margin-bottom: 2em; }
-  .programme .day .event { font-size: 0.9rem; padding: 18px 12px; }
+  .programme .day .event { font-size: 0.9rem; padding: 8px 12px; }
   .programme .day .event .time { width: 80px; margin-right: 12px; }
 }
