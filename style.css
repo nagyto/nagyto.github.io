@@ -301,4 +301,23 @@ body.subpage {
   padding: 0;
 }
 
+/* Filter buttons */
+.filter-buttons {
+  margin-bottom: 1em;
+}
+
+.filter-buttons button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #444;
+  color: white;
+}
+
+.filter-buttons button:hover {
+  background-color: #666;
+}
+
 
