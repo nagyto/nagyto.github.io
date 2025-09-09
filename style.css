@@ -236,29 +236,13 @@ body.subpage {
 }
 
 /* -------------------- Programme page -------------------- */
-.programme h1 {
-  text-align: center;
-  margin-bottom: 1.5em;
-}
-
-.programme .day {
-  margin-bottom: 2em;
-}
-
-.programme .day h2 {
-  font-size: 1.8rem;
-  color: #0077cc;
-  margin-bottom: 0.8em;
-}
-
-/* Full-width events (cards) */
 .programme .day .event {
   display: flex;
-  align-items: center;
-  padding: 15px 20px;          /* taller card */
-  margin-bottom: 5px;           /* less space between cards */
+  align-items: flex-start;       /* align time and activity top */
+  padding: 20px 20px;            /* taller cards */
+  margin-bottom: 8px;            /* slightly more space between cards */
   border-radius: 12px;
-  color: black;                 /* text color */
+  color: black;
   font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
@@ -266,9 +250,10 @@ body.subpage {
 
 /* Time column */
 .programme .day .event .time {
-  width: 120px;                 /* broader column */
+  width: 120px;                   /* broader column */
   flex-shrink: 0;
   font-weight: 600;
+  margin-right: 15px;             /* more space between time and activity */
 }
 
 /* Activity description */
@@ -284,13 +269,11 @@ body.subpage {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .programme .day h2 { font-size: 1.5rem; }
-  .programme .day .event { font-size: 0.95rem; padding: 12px 15px; }
-  .programme .day .event .time { width: 100px; }
+  .programme .day .event { font-size: 0.95rem; padding: 16px 15px; }
+  .programme .day .event .time { width: 100px; margin-right: 12px; }
 }
 
 @media (max-width: 480px) {
-  .programme .day h2 { font-size: 1.3rem; }
-  .programme .day .event { font-size: 0.9rem; padding: 10px 12px; }
-  .programme .day .event .time { width: 80px; }
+  .programme .day .event { font-size: 0.9rem; padding: 14px 12px; }
+  .programme .day .event .time { width: 80px; margin-right: 10px; }
 }
