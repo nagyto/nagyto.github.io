@@ -21,24 +21,23 @@ html, body {
   align-items: center;
   padding: 0 10px;
   z-index: 1002;
-  background: transparent;
 }
 
-/* Page-specific navbar backgrounds for the toggle */
+/* Background per page */
 .navbar.home .menu-toggle { background: transparent; }
 .navbar.subpage .menu-toggle { background: black; }
 
 /* -------------------- Hamburger / X -------------------- */
 .menu-toggle {
-  position: relative;
   width: 40px;
   height: 40px;
-  cursor: pointer;
   display: flex;
-  flex-direction: column;       /* stack bars vertically */
-  justify-content: space-around;/* evenly space */
+  flex-direction: column;
+  justify-content: space-between; /* evenly space bars */
+  padding: 8px 0; /* padding inside square */
   align-items: center;
   border-radius: 6px;
+  cursor: pointer;
   z-index: 1003;
 }
 
@@ -61,7 +60,7 @@ html, body {
 .menu-toggle.active span:nth-child(3) {
   position: absolute;
   top: 50%;
-  margin-top: -2px;  /* half bar height */
+  margin-top: -2px;
 }
 .menu-toggle.active span:nth-child(1) { transform: rotate(45deg); }
 .menu-toggle.active span:nth-child(2) { opacity: 0; }
