@@ -284,9 +284,15 @@ body.subpage {
   .programme .day .event .time { width: 80px; margin-right: 12px; }
 }
 
-.organisers li a {
-  display: inline;   /* ensures link does not create extra space */
-  margin: 0;
-  padding: 0;
+/* Make the organisers list compact */
+.organisers {
+  list-style: none;     /* remove bullets */
+  padding-left: 0;      /* remove default padding */
+  margin: 0;            /* remove default margin */
+}
+
+.organisers li {
+  margin: 0;            /* remove extra spacing */
+  padding: 0;           /* remove extra spacing */
 }
 
