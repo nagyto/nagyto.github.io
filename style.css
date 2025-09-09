@@ -111,13 +111,13 @@ body.home .hero-content {
 }
 
 body.home .hero-content h1 {
-  font-size: 12rem; /* fixed size, guaranteed to be huge */
+  font-size: 6rem; /* fixed size, guaranteed to be huge */
   font-weight: 800;
   margin: 0 0 3rem 0;
 }
 
 body.home .hero-content p {
-  font-size: 5rem; /* fixed proportional subtitle */
+  font-size: 3rem; /* fixed proportional subtitle */
   font-weight: 300;
   opacity: 0.9;
   margin: 0;
