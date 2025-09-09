@@ -1,15 +1,14 @@
 /* -------------------- Reset -------------------- */
 * { margin:0; padding:0; box-sizing:border-box; }
-html, body { width: 100%; height: 100%; background: #000; font-family: Arial, sans-serif; line-height:1.6; color:white; overflow-x:hidden; }
+html, body { width: 100%; height: 100%; font-family: Arial, sans-serif; line-height:1.6; color:white; overflow-x:hidden; }
 
 /* -------------------- Hero Section -------------------- */
 body.home {
   background: url('images/hero.jpg') no-repeat center center/cover;
-  background-color: #000; /* top area behind navbar black */
   height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 70px; /* push hero content below navbar */
+  padding-top: 70px; /* push content below navbar */
   margin: 0;
 }
 body.home .hero {
@@ -20,6 +19,7 @@ body.home .hero {
   align-items:center;
   text-align:center;
   padding:0 15px;
+  margin:0;
 }
 body.home .hero h1 { font-size:2rem; margin-bottom:10px; }
 body.home .hero p { font-size:1.2rem; }
@@ -29,13 +29,13 @@ body.home .hero p { font-size:1.2rem; }
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; /* full viewport width */
+  width: 100%;
   height: 70px;
   display: flex;
   align-items: center;
   padding: 0 10px;
   z-index: 1002;
-  background-color: #000; /* fully opaque black */
+  background-color: #000; /* solid black */
   border: none;
   box-shadow: none;
 }
@@ -43,11 +43,8 @@ body.home .hero p { font-size:1.2rem; }
 /* Hamburger / X */
 .menu-toggle {
   width: 50px;
-  height: 50px;            
+  height: 50px;
   cursor: pointer;
-  position: relative;
-  z-index: 1002;
-  flex-shrink: 0;           
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -55,19 +52,20 @@ body.home .hero p { font-size:1.2rem; }
   background-color: #000; /* match navbar */
   border-radius: 8px;
   padding: 6px 0;
+  position: relative;
+  z-index: 1002;
   overflow: hidden;
 }
 
 .menu-toggle span {
   display: block;
-  width: 70%;             
+  width: 70%;
   height: 4px;
   background: white;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
-/* Active state → X perfectly centered */
 .menu-toggle.active span:nth-child(1) {
   position: absolute;
   top: 50%;
@@ -75,11 +73,7 @@ body.home .hero p { font-size:1.2rem; }
   width: 70%;
   transform: translate(-50%, -50%) rotate(45deg);
 }
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
+.menu-toggle.active span:nth-child(2) { opacity: 0; }
 .menu-toggle.active span:nth-child(3) {
   position: absolute;
   top: 50%;
@@ -122,7 +116,9 @@ body.home .hero p { font-size:1.2rem; }
 
 /* -------------------- Subpage Styling -------------------- */
 .subpage {
-  padding: 70px 20px 20px 20px; /* space for fixed navbar */
+  padding-top: 70px; /* start below navbar */
+  padding-left: 20px;
+  padding-right: 20px;
   background: #f4f4f4;
   color: #333;
 }
