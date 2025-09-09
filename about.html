@@ -8,27 +8,44 @@
 </head>
 <body class="subpage">
 
-  <nav class="navbar">
-    <div class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="content">
-    <h1>About Us</h1>
-    <p>Welcome to the About page. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <p>Our team is dedicated to providing high-quality services and ensuring customer satisfaction.</p>
+<nav class="navbar">
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span><span></span><span></span>
   </div>
+  <ul class="menu" id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<div class="menu-overlay" id="menu-overlay"></div>
 
-  <div class="menu-overlay"></div>
-  <script src="menu.js"></script>
+<div class="content">
+  <h1>About Us</h1>
+  <p>
+    This is the about page. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Curabitur eget sem ut massa suscipit gravida. Fully responsive and optimized for mobile devices.
+  </p>
+</div>
+
+<script>
+const toggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+const overlay = document.getElementById('menu-overlay');
+
+toggle.addEventListener('click', () => {
+  toggle.classList.toggle('active');
+  menu.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+  toggle.classList.remove('active');
+  menu.classList.remove('active');
+  overlay.classList.remove('active');
+});
+</script>
+
 </body>
 </html>
