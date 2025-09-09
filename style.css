@@ -126,8 +126,8 @@ body.home .hero-content p {
 /* -------------------- Responsive Font Scaling -------------------- */
 
 @media (max-width: 768px) {
-  body.home .hero-content h1 { font-size: 4rem; }
-  body.home .hero-content p { font-size: 2rem; }
+  body.home .hero-content h1 { font-size: 5rem; }
+  body.home .hero-content p { font-size: 2.5rem; }
 }
 
 @media (max-width: 480px) {
