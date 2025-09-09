@@ -1,15 +1,17 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
-const overlay = document.querySelector('.menu-overlay');
+document.querySelectorAll('.navbar').forEach(navbar => {
+  const toggle = navbar.querySelector('.menu-toggle');
+  const menu = navbar.querySelector('.menu');
+  const overlay = document.getElementById('menu-overlay');
 
-menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-  menu.classList.toggle('active');
-  overlay.classList.toggle('active');
-});
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    menu.classList.toggle('active');
+    overlay.classList.toggle('active');
+  });
 
-overlay.addEventListener('click', () => {
-  menuToggle.classList.remove('active');
-  menu.classList.remove('active');
-  overlay.classList.remove('active');
+  overlay.addEventListener('click', () => {
+    toggle.classList.remove('active');
+    menu.classList.remove('active');
+    overlay.classList.remove('active');
+  });
 });
