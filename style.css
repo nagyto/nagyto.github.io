@@ -8,7 +8,6 @@ html, body {
   width: 100%;
   height: 100%;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
 }
 
 /* -------------------- Navbar -------------------- */
@@ -17,18 +16,18 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 15px;
   z-index: 1002;
-  background: transparent; /* overlay on hero */
+  background: transparent; /* overlay hero */
 }
 
 /* Hamburger / X */
 .menu-toggle {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -50,30 +49,30 @@ html, body {
 }
 
 .menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(5px,5px);
 }
 .menu-toggle.active span:nth-child(2) { opacity: 0; }
 .menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(5px,-5px);
 }
 
 /* -------------------- Slide-out Menu -------------------- */
 .menu {
   list-style: none;
-  background: rgba(0,0,0,0.9);
   position: fixed;
   top: 0;
   left: -220px;
   width: 220px;
   height: 100%;
-  padding-top: 50px;
+  background: rgba(0,0,0,0.9);
+  padding-top: 60px;
   transition: left 0.3s ease;
   z-index: 1000;
 }
 .menu.active { left: 0; }
 .menu li { border-bottom: 1px solid rgba(255,255,255,0.2); }
 .menu li:last-child { border-bottom: none; }
-.menu a { display: block; padding: 15px 20px; text-decoration: none; color: white; }
+.menu a { display: block; padding: 15px 20px; color: white; text-decoration: none; }
 .menu a:hover { background: rgba(255,255,255,0.1); }
 
 /* -------------------- Overlay -------------------- */
@@ -87,9 +86,12 @@ html, body {
   transition: opacity 0.3s ease;
   z-index: 1001;
 }
-.menu-overlay.active { opacity:1; visibility: visible; }
+.menu-overlay.active { opacity: 1; visibility: visible; }
 
-/* -------------------- Hero Section (index.html) -------------------- */
+/* -------------------- Hero Section -------------------- */
+body.home {
+  background: none; /* do not set black */
+}
 body.home .hero {
   height: 100vh;
   background: url('images/hero.jpg') no-repeat center center/cover;
@@ -98,21 +100,17 @@ body.home .hero {
   align-items: center;
   text-align: center;
 }
-
-/* Hero text */
-body.home .hero h1 { font-size: 2rem; color: white; }
+body.home .hero h1 { font-size: 2.5rem; color: white; }
 body.home .hero p { font-size: 1.2rem; color: white; }
 
-/* -------------------- Subpage content -------------------- */
+/* -------------------- Subpage -------------------- */
 body.subpage {
   background: #f4f4f4;
 }
-
 .subpage .content {
-  margin-top: 50px; /* space below navbar */
+  margin-top: 60px; /* start below navbar */
   padding: 20px;
 }
-
 .subpage .content h1 { margin-top: 0; }
 .subpage a { color: #0077cc; text-decoration: none; margin-right: 10px; }
 .subpage a:hover { text-decoration: underline; }
@@ -121,9 +119,7 @@ body.subpage {
 @media (min-width:600px) and (max-width:1024px) {
   .menu { width: 250px; }
   .menu a { padding: 18px 25px; font-size: 1.1rem; }
-  .menu-toggle { width: 50px; height: 50px; }
-  body.home .hero h1 { font-size: 2.5rem; }
-  body.home .hero p { font-size: 1.4rem; }
+  .menu-toggle { width: 55px; height: 55px; }
 }
 
 @media (min-width:1025px) {
@@ -141,6 +137,4 @@ body.subpage {
   .menu a { padding: 10px 15px; color: white; }
   .menu-toggle { display: none; }
   .menu-overlay { display: none; }
-  body.home .hero h1 { font-size: 3rem; }
-  body.home .hero p { font-size: 1.6rem; }
 }
