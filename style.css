@@ -91,29 +91,38 @@ html, body {
 }
 .menu-overlay.active { opacity: 1; visibility: visible; }
 
-/* -------------------- Hero Section (index.html) -------------------- */
+/* -------------------- Hero Section (Cinematic) -------------------- */
 body.home .hero {
   height: 100vh;
   background: url("cervinia.jpg") no-repeat center center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;  /* start at top, then push down with margin */
-  align-items: center;          /* center horizontally */
+  position: relative;
+}
+
+body.home .hero-content {
+  position: absolute;
+  top: 55%;                  /* start in lower half */
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  padding-top: 55%;             /* always start around 55% from top */
+  width: 90%;                /* some margin on small screens */
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  line-height: 1.2;          /* tighter spacing for cinematic effect */
 }
 
-body.home .hero h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: white;
+body.home .hero-content h1 {
+  font-size: clamp(3rem, 8vw, 4.5rem); /* scales between 3rem and 4.5rem */
+  font-weight: 800;
+  margin: 0 0 15px 0;
 }
 
-body.home .hero p {
-  font-size: 1.8rem;
-  color: white;
+body.home .hero-content p {
+  font-size: clamp(1.4rem, 4vw, 2rem); /* scales dynamically */
+  font-weight: 300;
+  opacity: 0.9;
+  margin: 0;
 }
+
 
 /* -------------------- Responsive Font Scaling -------------------- */
 @media (max-width: 768px) {
