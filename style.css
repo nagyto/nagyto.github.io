@@ -208,7 +208,6 @@ body.subpage {
 }
 
 .subpage ul li {
-  margin-bottom: 0.8em;  /* space between list items */
   padding-left: 0;        /* remove extra padding inside li */
 }
 
