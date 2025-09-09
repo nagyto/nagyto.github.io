@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About</title>
   <link rel="stylesheet" href="style.css">
+  <script src="menu.js" defer></script>
 </head>
 <body class="subpage">
 
-<nav class="navbar">
-  <div class="menu-toggle" id="menu-toggle">
+<nav class="navbar subpage">
+  <div class="menu-toggle">
     <span></span><span></span><span></span>
   </div>
-  <ul class="menu" id="menu">
+  <ul class="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
@@ -28,24 +29,6 @@
     Curabitur eget sem ut massa suscipit gravida. Fully responsive and optimized for mobile devices.
   </p>
 </div>
-
-<script>
-const toggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
-const overlay = document.getElementById('menu-overlay');
-
-toggle.addEventListener('click', () => {
-  toggle.classList.toggle('active');
-  menu.classList.toggle('active');
-  overlay.classList.toggle('active');
-});
-
-overlay.addEventListener('click', () => {
-  toggle.classList.remove('active');
-  menu.classList.remove('active');
-  overlay.classList.remove('active');
-});
-</script>
 
 </body>
 </html>
