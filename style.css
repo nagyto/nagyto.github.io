@@ -102,7 +102,7 @@ body.home .hero-content {
   position: absolute;
   top: 55%;                 
   left: 50%;
-  transform: translateX(-50%); /* only horizontal centering */
+  transform: translateX(-50%);
   text-align: center;
   width: 90%;
   color: white;
@@ -111,29 +111,30 @@ body.home .hero-content {
 }
 
 body.home .hero-content h1 {
-  font-size: clamp(8rem, 20vw, 14rem); /* bigger minimum for small screens */
+  font-size: 12rem; /* fixed size, guaranteed to be huge */
   font-weight: 800;
-  margin: 0 0 clamp(1.5rem, 2vw, 3rem) 0;
+  margin: 0 0 3rem 0;
 }
 
 body.home .hero-content p {
-  font-size: clamp(4rem, 6vw, 5rem); /* subtitle bigger too */
+  font-size: 5rem; /* fixed proportional subtitle */
   font-weight: 300;
   opacity: 0.9;
   margin: 0;
 }
 
-
 /* -------------------- Responsive Font Scaling -------------------- */
+
 @media (max-width: 768px) {
-  body.home .hero h1 { font-size: 2.5rem; }
-  body.home .hero p { font-size: 1.2rem; }
+  body.home .hero-content h1 { font-size: 8rem; }
+  body.home .hero-content p { font-size: 4rem; }
 }
 
 @media (max-width: 480px) {
-  body.home .hero h1 { font-size: 2rem; }
-  body.home .hero p { font-size: 1rem; }
+  body.home .hero-content h1 { font-size: 6rem; }
+  body.home .hero-content p { font-size: 3rem; }
 }
+
 
 /* -------------------- Subpage content -------------------- */
 body.subpage {
