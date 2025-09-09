@@ -27,40 +27,40 @@ body.home .hero p { font-size:1.2rem; }
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px; /* matches subpage top padding */
+  height: 70px;
   display: flex;
   align-items: center;
   padding: 0 10px;
   z-index: 1002;
-  background: rgba(0,0,0,0.6); /* optional, for visibility on subpages */
+  background: rgba(0,0,0,0.6);
 }
 
 /* Hamburger / X */
 .menu-toggle {
   width: 50px;
   height: 50px;
-  position: relative; /* for absolute spans */
+  position: relative;
   cursor: pointer;
-  z-index: 1002;
   display: block;
+  z-index: 1002;
 }
 
 .menu-toggle span {
   position: absolute;
+  display: block;
   height: 4px;
   width: 100%;
   background: white;
   left: 0;
   border-radius: 2px;
   transition: 0.3s ease;
+  transform-origin: center;
 }
 
-/* Position the 3 bars */
 .menu-toggle span:nth-child(1) { top: 12px; }
 .menu-toggle span:nth-child(2) { top: 23px; }
 .menu-toggle span:nth-child(3) { top: 34px; }
 
-/* When active → form X */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg);
   top: 23px;
@@ -107,16 +107,14 @@ body.home .hero p { font-size:1.2rem; }
 
 /* -------------------- Subpage Styling -------------------- */
 .subpage {
-  padding: 70px 20px 20px 20px; /* top = navbar height */
+  padding: 70px 20px 20px 20px;
   background: #f4f4f4;
   color: #333;
 }
 .subpage nav { margin-bottom:20px; }
 .subpage a { margin-right:10px; color:#0077cc; text-decoration:none; }
 .subpage a:hover { text-decoration:underline; }
-.subpage .content {
-  padding-top: 20px;
-}
+.subpage .content { padding-top: 20px; }
 
 /* -------------------- Responsive -------------------- */
 @media (min-width:600px) and (max-width:1024px) {
