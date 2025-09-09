@@ -32,32 +32,46 @@ body.home .hero p { font-size:1.2rem; }
   align-items: center;
   padding: 0 10px;
   z-index: 1002;
+  background: rgba(0,0,0,0.6); /* optional, for visibility on subpages */
 }
 
+/* Hamburger / X */
 .menu-toggle {
   width: 50px;
   height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  position: relative; /* for absolute spans */
   cursor: pointer;
-  border-radius: 8px;
-  background: rgba(0,0,0,0.6);
   z-index: 1002;
-  padding: 0; /* ensures perfect square */
-}
-.menu-toggle span {
   display: block;
+}
+
+.menu-toggle span {
+  position: absolute;
   height: 4px;
   width: 100%;
   background: white;
+  left: 0;
   border-radius: 2px;
-  transition: all 0.3s ease;
-  transform-origin: center; /* ensures clean X rotation */
+  transition: 0.3s ease;
 }
-.menu-toggle.active span:nth-child(1) { transform: rotate(45deg); }
-.menu-toggle.active span:nth-child(2) { opacity: 0; }
-.menu-toggle.active span:nth-child(3) { transform: rotate(-45deg); }
+
+/* Position the 3 bars */
+.menu-toggle span:nth-child(1) { top: 12px; }
+.menu-toggle span:nth-child(2) { top: 23px; }
+.menu-toggle span:nth-child(3) { top: 34px; }
+
+/* When active → form X */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 23px;
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 23px;
+}
 
 /* -------------------- Slide-out Menu -------------------- */
 .menu {
