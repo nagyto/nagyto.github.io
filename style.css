@@ -100,24 +100,24 @@ body.home .hero {
 
 body.home .hero-content {
   position: absolute;
-  top: 55%;                  /* start in lower half */
+  top: 55%;                 
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 90%;                /* some margin on small screens */
+  width: 90%;
   color: white;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-  line-height: 1.2;          /* tighter spacing for cinematic effect */
+  line-height: 1.1;
 }
 
 body.home .hero-content h1 {
-  font-size: clamp(6rem, 16vw, 9rem); /* main title twice as big */
+  font-size: clamp(7rem, 20vw, 12rem); /* big, responsive */
   font-weight: 800;
-  margin: 0 0 15px 0;
+  margin: 0 0 clamp(1rem, 2vw, 2rem) 0; /* dynamic bottom margin scaling with viewport */
 }
 
 body.home .hero-content p {
-  font-size: clamp(2.5rem, 5vw, 3.5rem); /* subtitle scaled proportionally */
+  font-size: clamp(3rem, 6vw, 4.5rem); /* subtitle scaled proportionally */
   font-weight: 300;
   opacity: 0.9;
   margin: 0;
