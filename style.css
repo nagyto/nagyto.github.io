@@ -175,3 +175,21 @@ body.subpage {
   body.home .hero h1 { font-size: 3rem; }
   body.home .hero p { font-size: 1.6rem; }
 }
+
+/* -------------------- Subpage hyperlinks -------------------- */
+.subpage p a {
+  text-decoration: underline;   /* or your preferred style */
+  color: #0077cc;               /* same as before */
+  margin: 0;                     /* remove extra margin */
+  padding: 0;                    /* remove extra padding */
+  line-height: inherit;          /* use paragraph's line-height */
+  display: inline;               /* ensure no block spacing */
+}
+
+/* -------------------- Space before subtitles (h4) -------------------- */
+.subpage h4 {
+  margin-top: 1.5em; /* adds empty space before h4 */
+  margin-bottom: 0.5em; /* optional, space after subtitle */
+  font-weight: 600;   /* adjust if you want bolder subtitle */
+  color: #333;        /* optional */
+}
