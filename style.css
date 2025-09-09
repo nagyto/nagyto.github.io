@@ -98,6 +98,10 @@ body.home .hero p { font-size:1.2rem; }
 .subpage nav { margin-bottom:20px; }
 .subpage a { margin-right:10px; color:#0077cc; text-decoration:none; }
 .subpage a:hover { text-decoration:underline; }
+.subpage .content {
+  padding-top: 20px; /* small padding inside page */
+}
+
 
 /* -------------------- Responsive -------------------- */
 @media (min-width:600px) and (max-width:1024px) {
