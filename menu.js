@@ -1,16 +1,13 @@
-// Select elements
-const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
-const overlay = document.getElementById('menu-overlay');
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+const overlay = document.querySelector('.menu-overlay');
 
-// Toggle menu
 menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('active');
   menu.classList.toggle('active');
   overlay.classList.toggle('active');
 });
 
-// Close menu when overlay clicked
 overlay.addEventListener('click', () => {
   menuToggle.classList.remove('active');
   menu.classList.remove('active');
