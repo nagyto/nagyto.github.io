@@ -100,9 +100,9 @@ body.home .hero {
 
 body.home .hero-content {
   position: absolute;
-  top: 55%;                 
+  top: 55%;                 /* lower half start */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%); /* only center horizontally, do NOT shift vertically */
   text-align: center;
   width: 90%;
   color: white;
@@ -111,13 +111,13 @@ body.home .hero-content {
 }
 
 body.home .hero-content h1 {
-  font-size: clamp(7rem, 20vw, 12rem); /* big, responsive */
+  font-size: clamp(9rem, 22vw, 14rem); /* really big title now */
   font-weight: 800;
-  margin: 0 0 clamp(1rem, 2vw, 2rem) 0; /* dynamic bottom margin scaling with viewport */
+  margin: 0 0 clamp(1rem, 2vw, 2rem) 0; /* dynamic bottom margin */
 }
 
 body.home .hero-content p {
-  font-size: clamp(3rem, 6vw, 4.5rem); /* subtitle scaled proportionally */
+  font-size: clamp(3.5rem, 6vw, 5rem); /* subtitle scaled proportionally */
   font-weight: 300;
   opacity: 0.9;
   margin: 0;
