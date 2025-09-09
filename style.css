@@ -266,10 +266,10 @@ body.subpage {
 }
 
 /* Softer background colors for all event types */
-.programme .day .event.talk { background-color: #c8e6c9; }     /* soft green */
-.programme .day .event.meal { background-color: #ffe0b2; }     /* soft orange */
-.programme .day .event.coffee { background-color: #d7ccc8; }   /* soft brown */
-.programme .day .event.sport { background-color: #bbdefb; }    /* soft blue */
+.programme .day .event.talk { background-color: #F2F2F2; }     
+.programme .day .event.meal { background-color: #FCE4CA; }     
+.programme .day .event.coffee { background-color: #FEF3E7; }   
+.programme .day .event.sport { background-color: #E8FCCA; }    
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
