@@ -94,7 +94,7 @@ html, body {
 /* -------------------- Hero Section (index.html) -------------------- */
 body.home .hero {
   height: 100vh;
-  background: url('cervinia.jpg') no-repeat center center/cover;
+  background: url("cervinia.jpg") no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
