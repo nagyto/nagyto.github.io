@@ -96,16 +96,35 @@ body.home .hero {
   height: 100vh;
   background: url("cervinia.jpg") no-repeat center center/cover;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;  /* start at top, then push down with margin */
+  align-items: center;          /* center horizontally */
   text-align: center;
+  padding-top: 55%;             /* always start around 55% from top */
 }
-body.home .hero h1,
-body.home .hero p {
+
+body.home .hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
   color: white;
 }
-body.home .hero h1 { font-size: 2.5rem; }
-body.home .hero p { font-size: 1.2rem; }
+
+body.home .hero p {
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* -------------------- Responsive Font Scaling -------------------- */
+@media (max-width: 768px) {
+  body.home .hero h1 { font-size: 2.5rem; }
+  body.home .hero p { font-size: 1.2rem; }
+}
+
+@media (max-width: 480px) {
+  body.home .hero h1 { font-size: 2rem; }
+  body.home .hero p { font-size: 1rem; }
+}
 
 /* -------------------- Subpage content -------------------- */
 body.subpage {
