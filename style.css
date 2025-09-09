@@ -176,20 +176,39 @@ body.subpage {
   body.home .hero p { font-size: 1.6rem; }
 }
 
+/* -------------------- Subpage paragraph spacing -------------------- */
+.subpage p {
+  margin: 1em 0;       /* adds space between paragraphs */
+  line-height: 1.6;    /* ensures readable spacing */
+}
+
 /* -------------------- Subpage hyperlinks -------------------- */
 .subpage p a {
-  text-decoration: underline;   /* or your preferred style */
-  color: #0077cc;               /* same as before */
-  margin: 0;                     /* remove extra margin */
-  padding: 0;                    /* remove extra padding */
-  line-height: inherit;          /* use paragraph's line-height */
-  display: inline;               /* ensure no block spacing */
+  text-decoration: underline;
+  color: #0077cc;
+  margin: 0;            /* remove extra margin */
+  padding: 0;           /* remove extra padding */
+  line-height: inherit; /* inherit paragraph spacing */
+  display: inline;      /* prevent extra vertical space */
 }
 
 /* -------------------- Space before subtitles (h4) -------------------- */
 .subpage h4 {
-  margin-top: 1.5em; /* adds empty space before h4 */
-  margin-bottom: 0.5em; /* optional, space after subtitle */
-  font-weight: 600;   /* adjust if you want bolder subtitle */
-  color: #333;        /* optional */
+  margin-top: 2em;     /* adds space before h4 */
+  margin-bottom: 0.5em;/* optional, space after subtitle */
+  font-weight: 600;    /* optional: make subtitle stand out */
+  color: #333;         /* optional */
 }
+
+/* -------------------- Align list items with paragraphs and subtitles -------------------- */
+.subpage ul {
+  padding-left: 20px; /* overall padding for the whole list */
+  margin-left: 0;     /* remove default left margin */
+  list-style-position: inside; /* optional: bullet aligns with text */
+}
+
+.subpage ul li {
+  margin-bottom: 0.8em;  /* space between list items */
+  padding-left: 0;        /* remove extra padding inside li */
+}
+
