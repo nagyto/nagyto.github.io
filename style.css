@@ -266,7 +266,8 @@ body.subpage {
 }
 
 /* Softer background colors for all event types */
-.programme .day .event.talk { background-color: #BEEBF9; }     
+.programme .day .event.talk { background-color: #BEEBF9; }
+.programme .day .event.work { background-color: #DBDBDB; }
 .programme .day .event.meal { background-color: #FCE4CA; }     
 .programme .day .event.coffee { background-color: #FEF3E7; }   
 .programme .day .event.sport { background-color: #E8FCCA; }    
