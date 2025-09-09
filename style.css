@@ -243,8 +243,8 @@ body.subpage {
 .programme .day .event {
   display: flex;
   align-items: flex-start;       /* align time and activity to top */
-  padding: 12px 20px;            /* reduce vertical padding → shorter cards (~60% of before) */
-  margin-bottom: 10px;           /* spacing between cards */
+  padding: 12px 20px;            /* card height (~60% of original) */
+  margin-bottom: 4px;            /* smaller gap between cards */
   border-radius: 12px;
   color: black;
   font-size: 1rem;
